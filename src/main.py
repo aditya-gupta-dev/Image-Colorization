@@ -21,7 +21,7 @@ def main():
         if os.path.isfile(file) and utils.is_image_file(file):
             image_files.append(file)
 
-    for file in files:
+    for file in image_files:
         threading.Thread(target=image_converter, args=file).start()
 
     print("done...")
